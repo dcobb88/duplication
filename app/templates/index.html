@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}Pet Shop - Home{% endblock %}
+
+{% block content %}
+<div id="home" class="container">
+    <!-- Welcome Section -->
+    <div class="welcome-section">
+        <h1>Welcome to Drew's pet shop!</h1>
+        <p>We're thrilled to have you here. At our pet shop, we provide a variety of products, grooming services, and pets ready to become part of your family.</p>
+        <p>Navigate to learn more about us and explore all that we have to offer for you and your pets.</p>
+    </div>
+
+    <!-- Cards for Navigation -->
+    <div class="row text-center">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">About Us</h3>
+                    <p class="card-text">Learn more about our journey and our commitment to you and your pets.</p>
+                    <a href="{{ url_for('about') }}" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Grooming Services</h3>
+                    <p class="card-text">We provide grooming services to keep your pets looking their best.</p>
+                    <a href="{{ url_for('grooming') }}" class="btn btn-primary">View Services</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Products</h3>
+                    <p class="card-text">Browse our selection of high-quality products for all your pet needs.</p>
+                    <a href="{{ url_for('products') }}" class="btn btn-primary">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Pets for Adoption</h3>
+                    <p class="card-text">Looking for a new friend? Check out the pets we have available for adoption.</p>
+                    <a href="{{ url_for('pets') }}" class="btn btn-primary">Meet Our Pets</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Help</h3>
+                    <p class="card-text">Need assistance? Visit our help page for support and FAQs.</p>
+                    <a href="{{ url_for('help') }}" class="btn btn-primary">Get Help</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
